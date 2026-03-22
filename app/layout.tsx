@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 import "./globals.css";
+import { Suspense } from "react";
 import HashScrollHandler from "@/components/HashScrollHandler";
 
 const geistSans = Geist({
@@ -21,7 +22,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} antialiased`}>
-        <HashScrollHandler />
+        <Suspense fallback={null}>
+          <HashScrollHandler />
+        </Suspense>
         {children}
       </body>
     </html>
