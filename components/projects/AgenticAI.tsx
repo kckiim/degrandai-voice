@@ -324,7 +324,7 @@ export default function AgenticAI() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Want something like this for your business?</h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">This is the kind of infrastructure we build for clients — custom AI systems that actually work inside your operation.</p>
-          <a href="/#contact"
+          <a href="https://degrand.ai/#contact"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
           >
             Let&apos;s talk

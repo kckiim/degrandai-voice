@@ -31,7 +31,7 @@ export default function About() {
             ))}
 
             <div className="pt-4">
-              <a href="/#contact"
+              <a href="https://degrand.ai/#contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 text-sm gap-2"
               >
                 Work with us

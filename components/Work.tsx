@@ -54,7 +54,7 @@ export default function Work() {
               Imagine what we can do with your problems on the table.
             </span>
           </p>
-          <a href="/#contact"
+          <a href="https://degrand.ai/#contact"
             className="inline-flex items-center mt-6 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors gap-2"
           >
             Let&apos;s talk
