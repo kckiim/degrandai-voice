@@ -55,7 +55,7 @@ export default function Work() {
             </span>
           </p>
           <a
-            href="#contact"
+            href="/#contact"
             className="inline-flex items-center mt-6 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors gap-2"
           >
             Let&apos;s talk

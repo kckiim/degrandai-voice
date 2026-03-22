@@ -275,7 +275,7 @@ export default function VoiceAgent() {
               Try the demo ↑
             </a>
             <a
-              href="#contact"
+              href="/#contact"
               className="inline-flex items-center gap-2 border border-white/15 hover:border-white/30 text-gray-300 hover:text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
             >
               Get in touch
