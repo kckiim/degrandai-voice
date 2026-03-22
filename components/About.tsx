@@ -1,3 +1,5 @@
+'use client';
+import Link from 'next/link';
 const paragraphs = [
   "K.C. deGregory founded DEGRAND.AI after spending over a decade in logistics and operations — managing freight, fixing workflows, and figuring out why things weren't moving as fast as they should. Operations teaches you how to find the real problem, not the surface one. That's still how we think.",
   "A few years ago, we started building with AI — not just using it, actually building with it. Automations, integrations, full applications. The more we built, the clearer it became that most businesses weren't slow because of their people. They were slow because their processes hadn't caught up to what's possible now.",
@@ -29,15 +31,14 @@ export default function About() {
             ))}
 
             <div className="pt-4">
-              <a
-                href="/#contact"
+              <Link href="/#contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 text-sm gap-2"
               >
                 Work with us
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>

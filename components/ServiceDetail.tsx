@@ -151,15 +151,14 @@ export default function ServiceDetail({ slug }: { slug: string }) {
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-gray-400 mb-2 text-sm">{service.nextStep}</p>
             <h2 className="text-2xl font-bold text-white mb-6">Ready to get started?</h2>
-            <a
-              href="/#contact"
+            <Link href="/#contact"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
             >
               Let&apos;s talk
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
           </div>
         </section>
       )}

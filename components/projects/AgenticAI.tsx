@@ -324,15 +324,14 @@ export default function AgenticAI() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Want something like this for your business?</h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">This is the kind of infrastructure we build for clients — custom AI systems that actually work inside your operation.</p>
-          <a
-            href="/#contact"
+          <Link href="/#contact"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
           >
             Let&apos;s talk
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </a>
+          </Link>
         </div>
       </section>
     </div>
