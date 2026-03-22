@@ -31,14 +31,14 @@ export default function About() {
             ))}
 
             <div className="pt-4">
-              <Link href="/#contact"
+              <a href="/#contact"
                 className="inline-flex items-center px-6 py-3 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 text-sm gap-2"
               >
                 Work with us
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>

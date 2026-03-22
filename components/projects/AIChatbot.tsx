@@ -75,7 +75,7 @@ export default function AIChatbot() {
       {/* Back */}
       <div className="px-6 pt-8">
         <div className="max-w-6xl mx-auto">
-          <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">← Back</Link>
+          <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">← Back</a>
         </div>
       </div>
 
@@ -100,14 +100,14 @@ export default function AIChatbot() {
             <p className="text-gray-500 leading-relaxed mb-10">
               Built and trained specifically for your business. Knows your services, your tone, and what your customers actually ask. Embeds anywhere with a single line of code.
             </p>
-            <Link href="/#contact"
+            <a href="/#contact"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
             >
               Get one for your business
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </motion.div>
 
           {/* Right — live chatbot embed */}
@@ -201,7 +201,7 @@ export default function AIChatbot() {
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">Want one for your website?</h2>
           <p className="text-gray-400 mb-8 max-w-xl mx-auto">We&apos;ll build and train a chatbot for your specific business — live on your site in days.</p>
-          <Link href="/#contact"
+          <a href="/#contact"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
           >
             Let&apos;s talk

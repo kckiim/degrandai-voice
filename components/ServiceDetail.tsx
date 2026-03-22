@@ -14,7 +14,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
       <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500 mb-4">Service not found.</p>
-          <Link href="/" className="text-blue-400 hover:text-blue-300">← Back home</Link>
+          <Link href="/" className="text-blue-400 hover:text-blue-300">← Back home</a>
         </div>
       </div>
     );
@@ -151,7 +151,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
           <div className="max-w-5xl mx-auto text-center">
             <p className="text-gray-400 mb-2 text-sm">{service.nextStep}</p>
             <h2 className="text-2xl font-bold text-white mb-6">Ready to get started?</h2>
-            <Link href="/#contact"
+            <a href="/#contact"
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
             >
               Let&apos;s talk

@@ -42,7 +42,7 @@ export default function Work() {
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
-            </Link>
+            </a>
           ))}
         </div>
 
@@ -54,7 +54,7 @@ export default function Work() {
               Imagine what we can do with your problems on the table.
             </span>
           </p>
-          <Link href="/#contact"
+          <a href="/#contact"
             className="inline-flex items-center mt-6 text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors gap-2"
           >
             Let&apos;s talk
