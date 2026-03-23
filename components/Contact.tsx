@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 
-type FormState = 'idle' | 'submitted';
+type FormState = 'idle' | 'submitting' | 'submitted' | 'error';
 
 export default function Contact() {
   const [state, setState] = useState<FormState>('idle');
@@ -19,9 +19,28 @@ export default function Contact() {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setState('submitted');
+    setState('submitting');
+    try {
+      const body = new URLSearchParams({
+        'form-name': 'contact',
+        'bot-field': '',
+        ...form,
+      });
+      const res = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      });
+      if (res.ok) {
+        setState('submitted');
+      } else {
+        setState('error');
+      }
+    } catch {
+      setState('error');
+    }
   };
 
   return (
@@ -85,8 +104,8 @@ export default function Contact() {
                 </svg>
               </div>
               <div>
-                <p className="text-white font-medium">Halifax, NS</p>
-                <p className="text-gray-500 text-sm mt-1">Available for remote engagements worldwide</p>
+                <p className="text-white font-medium">Canada-based, remote-first</p>
+                <p className="text-gray-500 text-sm mt-1">Working with clients across North America and beyond</p>
               </div>
             </div>
           </div>
@@ -115,8 +134,13 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
+                name="contact"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
                 className="bg-[#111111] border border-white/8 rounded-2xl p-8 space-y-5"
               >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="text" name="bot-field" className="hidden" />
                 {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="name">
@@ -185,11 +209,17 @@ export default function Contact() {
                   />
                 </div>
 
+                {state === 'error' && (
+                  <p className="text-red-400 text-sm text-center">
+                    Something went wrong. Try again or email us directly at hello@degrand.ai.
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="w-full py-4 bg-blue-500 hover:bg-blue-400 text-white font-semibold rounded-lg transition-colors duration-200 text-sm tracking-wide"
+                  disabled={state === 'submitting'}
+                  className="w-full py-4 bg-blue-500 hover:bg-blue-400 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold rounded-lg transition-colors duration-200 text-sm tracking-wide"
                 >
-                  Send It
+                  {state === 'submitting' ? 'Sending...' : 'Send It'}
                 </button>
               </form>
             )}
