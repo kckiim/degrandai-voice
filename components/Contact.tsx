@@ -23,17 +23,16 @@ export default function Contact() {
     e.preventDefault();
     setState('submitting');
     try {
-      const body = new URLSearchParams({
-        'form-name': 'contact',
-        'bot-field': '',
-        ...form,
-      });
-      const res = await fetch('/', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: body.toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: '1dfb4624-f34d-4cac-b591-0e150e1071cd',
+          ...form,
+        }),
       });
-      if (res.ok) {
+      const data = await res.json();
+      if (data.success) {
         setState('submitted');
       } else {
         setState('error');
@@ -134,13 +133,8 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
-                name="contact"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
                 className="bg-[#111111] border border-white/8 rounded-2xl p-8 space-y-5"
               >
-                <input type="hidden" name="form-name" value="contact" />
-                <input type="text" name="bot-field" className="hidden" />
                 {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="name">
