@@ -54,11 +54,20 @@ const capabilities = [
 export default function VoiceAgent() {
   const vapiRef = useRef<Vapi | null>(null);
   const [callActive, setCallActive] = useState(false);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const stopCall = () => {
+    vapiRef.current?.stop();
+    setCallActive(false);
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  };
 
   const handleCall = async () => {
     if (callActive) {
-      vapiRef.current?.stop();
-      setCallActive(false);
+      stopCall();
       return;
     }
 
@@ -73,11 +82,28 @@ export default function VoiceAgent() {
     const vapi = new Vapi(VAPI_API_KEY);
     vapiRef.current = vapi;
 
-    vapi.on('call-end', () => setCallActive(false));
-    vapi.on('error', () => setCallActive(false));
+    vapi.on('call-end', () => {
+      setCallActive(false);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    });
+    vapi.on('error', () => {
+      setCallActive(false);
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+    });
 
     await vapi.start(VAPI_ASSISTANT_ID);
     setCallActive(true);
+
+    // Auto hang up after 60 seconds
+    timeoutRef.current = setTimeout(() => {
+      stopCall();
+    }, 60000);
   };
 
   return (
