@@ -75,7 +75,7 @@ export default function AIChatbot() {
       {/* Back */}
       <div className="px-6 pt-8">
         <div className="max-w-6xl mx-auto">
-          <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">← Back</a>
+          <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">← Back</Link>
         </div>
       </div>
 
@@ -208,7 +208,7 @@ export default function AIChatbot() {
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
               <path d="M5 12h14M12 5l7 7-7 7" />
             </svg>
-          </Link>
+          </a>
         </div>
       </section>
     </div>

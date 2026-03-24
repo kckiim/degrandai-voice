@@ -14,7 +14,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
       <div className="min-h-screen bg-[#0a0a0a] text-white flex items-center justify-center">
         <div className="text-center">
           <p className="text-gray-500 mb-4">Service not found.</p>
-          <Link href="/" className="text-blue-400 hover:text-blue-300">← Back home</a>
+          <Link href="/" className="text-blue-400 hover:text-blue-300">← Back home</Link>
         </div>
       </div>
     );
@@ -158,7 +158,7 @@ export default function ServiceDetail({ slug }: { slug: string }) {
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </Link>
+            </a>
           </div>
         </section>
       )}

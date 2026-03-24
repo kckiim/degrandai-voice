@@ -85,7 +85,7 @@ export default function VoiceAgent() {
       {/* Back */}
       <div className="px-6 pt-8">
         <div className="max-w-6xl mx-auto">
-          <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">← Back</a>
+          <Link href="/" className="text-blue-400 hover:text-blue-300 text-sm">← Back</Link>
         </div>
       </div>
 
@@ -273,7 +273,7 @@ export default function VoiceAgent() {
               className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-6 py-3 rounded-full transition-colors text-sm"
             >
               Try the demo ↑
-            </Link>
+            </a>
             <a href="https://degrand.ai/#contact"
               className="inline-flex items-center gap-2 border border-white/15 hover:border-white/30 text-gray-300 hover:text-white font-medium px-6 py-3 rounded-full transition-colors text-sm"
             >
