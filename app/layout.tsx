@@ -10,7 +10,7 @@ const geistSans = Geist({
 
 export const metadata: Metadata = {
   title: 'DEGRAND.AI — AI & Automation Consulting',
-  description: 'K.C. deGregory helps businesses run leaner using AI and automation. Ops background, real builds, no slide decks.',
+  description: 'We help businesses run leaner using AI and automation. Ops background, real builds, no slide decks.',
 };
 
 export default function RootLayout({
