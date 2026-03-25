@@ -9,6 +9,67 @@ export interface Post {
 
 export const posts: Post[] = [
   {
+    slug: 'tasks-worth-automating-first',
+    tag: 'AI Automation',
+    title: 'The 5 Business Tasks Worth Automating First (And 3 You Should Leave Alone)',
+    teaser: 'Most automation advice starts with the big picture. Here\'s where to actually begin — the high-return tasks that are easy to automate, and the ones that will waste your time.',
+    date: 'March 25, 2026',
+    content: `Most conversations about automation start with the big picture — AI agents, autonomous workflows, the future of work. That's fun to talk about. It's also not where you should start.
+
+If you run a small business or operate a lean team, the question isn't "how do I automate everything?" It's "where am I bleeding time on stuff a machine could handle in two seconds?" That's a much more useful question.
+
+Here's my take on where to start — and where not to.
+
+## Start Here
+
+**1. Appointment and calendar management**
+
+Scheduling takes up a genuinely embarrassing amount of time. Back-and-forth emails to find a meeting slot, reminders, follow-ups, reschedules. Tools like Calendly handle most of this passably. Add a simple automation layer (Zapier, Make, n8n) and you can tie bookings into your CRM, trigger confirmation emails, and log everything without touching it. One afternoon of setup, years of time back.
+
+**2. Invoice follow-ups**
+
+Unpaid invoices are a cash flow problem disguised as a communication problem. Most accounting platforms (QuickBooks, FreshBooks, Wave) will auto-send reminders at intervals you set. If yours doesn't, a simple email automation will do it. This is low-stakes, high-return, and nobody enjoys chasing payments manually anyway.
+
+**3. Data entry between tools**
+
+If you're copying information from one system to another by hand — order details, customer info, form submissions — that's automation's easiest win. Tools like Zapier or Make were built specifically for this. You describe the trigger and the action, and it runs every time without you involved. Not glamorous, but it compounds fast.
+
+**4. Lead follow-up sequences**
+
+When someone fills out a form, downloads something, or sends an inquiry, the first response shouldn't depend on whether you happened to check your email. Automated follow-up sequences keep new leads warm while you're focused on everything else. The key is that the automation handles the timing — you still write the messages.
+
+**5. Reporting and dashboards**
+
+If you're manually pulling numbers from multiple places every week to build a status report, that's a job for automation. Connect your tools to a dashboard (Google Looker Studio is free, Notion databases work too) and let the data flow there automatically. Your weekly review becomes a read instead of a build.
+
+## Leave These Alone (For Now)
+
+**1. Client-facing strategy conversations**
+
+Automating the back-and-forth around scope, pricing, or problem-solving kills deals. This is relationship work. The speed you gain isn't worth the trust you lose when a client realizes they're talking to a sequence instead of a person.
+
+**2. Complaint resolution**
+
+Automated responses to complaints feel like a dismissal. And when something has gone wrong, a dismissal makes it worse. Keep a human in that loop — even if everything else around it is automated.
+
+**3. Anything with high stakes and low volume**
+
+If a task only happens a few times a year and the consequences of getting it wrong are significant, the overhead of building and maintaining the automation isn't worth it. Some things are just not worth the engineering time.
+
+## The Real Test
+
+Before automating anything, ask two questions:
+
+1. Is this task well-defined enough that a machine could follow it consistently?
+2. What happens when it fails — and can I live with that?
+
+If the answer to both is "yes, and I can handle the downside," automate it. If not, move on to something that passes the test.
+
+The goal isn't a fully automated business. The goal is to stop spending your time on things that don't require you — so you can spend more of it on things that do.
+
+That's exactly what we help businesses figure out at [DEGRAND.AI](https://degrand.ai). If you want to map out what's actually worth automating in your operation, [let's talk](https://degrand.ai).`,
+  },
+  {
     slug: 'ai-pros-cons',
     tag: 'AI Automation',
     title: 'AI for Business Owners: What It Actually Does Well (and Where It\'ll Waste Your Time)',
