@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { posts } from '@/data/posts';
 
 export default function Blog() {
@@ -24,16 +25,28 @@ export default function Blog() {
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
-              className="bg-[#111111] border border-white/8 rounded-2xl p-8 hover:border-white/20 transition-colors group"
+              className="bg-[#111111] border border-white/8 rounded-2xl overflow-hidden hover:border-white/20 transition-colors group"
             >
-              <span className="inline-block text-xs font-medium text-gray-500 bg-white/5 border border-white/8 rounded-full px-3 py-1 mb-6">
-                {post.tag}
-              </span>
-              <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors leading-snug">
-                {post.title}
-              </h3>
-              <p className="text-gray-500 leading-relaxed text-sm mb-6">{post.teaser}</p>
-              <p className="text-gray-600 text-xs">{post.date}</p>
+              {post.image && (
+                <div className="relative w-full aspect-video">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              )}
+              <div className="p-8">
+                <span className="inline-block text-xs font-medium text-gray-500 bg-white/5 border border-white/8 rounded-full px-3 py-1 mb-6">
+                  {post.tag}
+                </span>
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-blue-400 transition-colors leading-snug">
+                  {post.title}
+                </h3>
+                <p className="text-gray-500 leading-relaxed text-sm mb-6">{post.teaser}</p>
+                <p className="text-gray-600 text-xs">{post.date}</p>
+              </div>
             </Link>
           ))}
         </div>

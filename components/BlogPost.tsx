@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { posts } from '@/data/posts';
 
 function renderContent(content: string) {
@@ -71,6 +72,18 @@ export default function BlogPost({ slug }: { slug: string }) {
         </h1>
 
         <p className="text-gray-600 text-sm mb-12">{post.date}</p>
+
+        {post.image && (
+          <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-12">
+            <Image
+              src={post.image}
+              alt={post.title}
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        )}
 
         <div className="border-t border-white/8 pt-12">
           {renderContent(post.content)}

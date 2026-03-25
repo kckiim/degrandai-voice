@@ -5,6 +5,7 @@ export interface Post {
   teaser: string;
   date: string;
   content: string;
+  image?: string;
 }
 
 export const posts: Post[] = [
@@ -14,6 +15,7 @@ export const posts: Post[] = [
     title: 'The 5 Business Tasks Worth Automating First (And 3 You Should Leave Alone)',
     teaser: 'Most automation advice starts with the big picture. Here\'s where to actually begin — the high-return tasks that are easy to automate, and the ones that will waste your time.',
     date: 'March 25, 2026',
+    image: '/blog-images/tasks-worth-automating-first.jpg',
     content: `Most conversations about automation start with the big picture — AI agents, autonomous workflows, the future of work. That's fun to talk about. It's also not where you should start.
 
 If you run a small business or operate a lean team, the question isn't "how do I automate everything?" It's "where am I bleeding time on stuff a machine could handle in two seconds?" That's a much more useful question.
@@ -75,6 +77,7 @@ That's exactly what we help businesses figure out at [DEGRAND.AI](https://degran
     title: 'AI for Business Owners: What It Actually Does Well (and Where It\'ll Waste Your Time)',
     teaser: 'You\'ve heard the pitch. Here\'s the honest version — what AI is actually good for, where it falls apart, and how to think about whether it belongs in your business.',
     date: 'March 18, 2025',
+    image: '/blog-images/ai-pros-cons.jpg',
     content: `You've heard the pitch. AI is going to transform everything, automate everything, solve everything. And you're sitting there thinking: okay, but what does that actually mean for my business on a Tuesday morning?
 
 I've been building with AI — workflows, automations, custom tools — long enough to know the real answer is both more useful and more boring than the headlines suggest. So here's the honest version.
