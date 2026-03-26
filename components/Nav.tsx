@@ -1,10 +1,11 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { label: 'Home', anchor: '#home', page: '/' },
+  { label: 'Home', anchor: '#home', page: '/#home' },
   { label: 'Services', anchor: '#services', page: '/#services' },
   { label: 'Work', anchor: '#work', page: '/#work' },
   { label: 'About', anchor: '#about', page: '/#about' },
@@ -16,7 +17,6 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
   const isHome = pathname === '/';
-
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -34,23 +34,23 @@ export default function Nav() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a
+        <Link
           href="/"
           className="text-white font-semibold text-lg tracking-tight hover:text-blue-400 transition-colors"
         >
           DEGRAND.AI
-        </a>
+        </Link>
 
         {/* Desktop links */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={isHome ? link.anchor : link.page}
               className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -79,14 +79,14 @@ export default function Nav() {
       {menuOpen && (
         <div className="md:hidden bg-[#0a0a0a]/95 backdrop-blur-md border-b border-white/5 px-6 pb-6">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
               href={isHome ? link.anchor : link.page}
               className="block py-3 text-gray-400 hover:text-white transition-colors border-b border-white/5 last:border-0"
               onClick={() => setMenuOpen(false)}
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       )}

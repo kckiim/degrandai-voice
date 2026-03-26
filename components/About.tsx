@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link';
 const paragraphs = [
   "K.C. deGregory founded DEGRAND.AI after spending over a decade in logistics and operations — managing freight, fixing workflows, and figuring out why things weren't moving as fast as they should. Operations teaches you how to find the real problem, not the surface one. That's still how we think.",
   "A few years ago, we started building with AI — not just using it, actually building with it. Automations, integrations, full applications. The more we built, the clearer it became that most businesses weren't slow because of their people. They were slow because their processes hadn't caught up to what's possible now.",
