@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 const navLinks = [
   { label: 'Home', href: '#home' },
@@ -13,6 +14,14 @@ const navLinks = [
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  const getHref = (href: string) => {
+    if (isHome) return href;
+    if (href === '#home') return '/';
+    return `/${href.replace('#', '')}` === pathname ? href : `/${href.slice(1)}`;
+  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -31,7 +40,7 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <a
-          href="#home"
+          href="/"
           className="text-white font-semibold text-lg tracking-tight hover:text-blue-400 transition-colors"
         >
           DEGRAND.AI
@@ -42,7 +51,7 @@ export default function Nav() {
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={isHome ? link.href : `/${link.href.slice(1)}`}
               className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
             >
               {link.label}
@@ -77,7 +86,7 @@ export default function Nav() {
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={link.href}
+              href={isHome ? link.href : `/${link.href.slice(1)}`}
               className="block py-3 text-gray-400 hover:text-white transition-colors border-b border-white/5 last:border-0"
               onClick={() => setMenuOpen(false)}
             >
