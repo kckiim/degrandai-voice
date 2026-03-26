@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Work', href: '#work' },
-  { label: 'About', href: '#about' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Home', anchor: '#home', page: '/' },
+  { label: 'Services', anchor: '#services', page: '/#services' },
+  { label: 'Work', anchor: '#work', page: '/#work' },
+  { label: 'About', anchor: '#about', page: '/#about' },
+  { label: 'Contact', anchor: '#contact', page: '/#contact' },
 ];
 
 export default function Nav() {
@@ -17,11 +17,6 @@ export default function Nav() {
   const pathname = usePathname();
   const isHome = pathname === '/';
 
-  const getHref = (href: string) => {
-    if (isHome) return href;
-    if (href === '#home') return '/';
-    return `/${href.replace('#', '')}` === pathname ? href : `/${href.slice(1)}`;
-  };
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -51,7 +46,7 @@ export default function Nav() {
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={isHome ? link.href : `/${link.href.slice(1)}`}
+              href={isHome ? link.anchor : link.page}
               className="text-sm text-gray-400 hover:text-white transition-colors duration-200"
             >
               {link.label}
@@ -86,7 +81,7 @@ export default function Nav() {
           {navLinks.map((link) => (
             <a
               key={link.label}
-              href={isHome ? link.href : `/${link.href.slice(1)}`}
+              href={isHome ? link.anchor : link.page}
               className="block py-3 text-gray-400 hover:text-white transition-colors border-b border-white/5 last:border-0"
               onClick={() => setMenuOpen(false)}
             >
