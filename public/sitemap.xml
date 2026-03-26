@@ -26,6 +26,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://degrand.ai/blog</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://degrand.ai/blog/tasks-worth-automating-first</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://degrand.ai/blog/ai-pros-cons</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
