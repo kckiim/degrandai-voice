@@ -8,12 +8,16 @@ export default function Blog() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-16">
-          <p className="text-blue-400 text-sm font-medium tracking-widest uppercase mb-4">
-            Blog
-          </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4">
-            From the Blog
-          </h2>
+          <Link href="/blog">
+            <p className="text-blue-400 text-sm font-medium tracking-widest uppercase mb-4 hover:text-blue-300 transition-colors cursor-pointer">
+              Blog
+            </p>
+          </Link>
+          <Link href="/blog">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 hover:text-blue-400 transition-colors cursor-pointer">
+              From the Blog
+            </h2>
+          </Link>
           <p className="text-gray-400 max-w-xl leading-relaxed">
             Practical writing on AI, automation, and building better operations — no fluff, no filler.
           </p>
@@ -49,6 +53,19 @@ export default function Blog() {
               </div>
             </Link>
           ))}
+        </div>
+
+        {/* View all */}
+        <div className="border-t border-white/5 pt-10">
+          <Link
+            href="/blog"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 font-medium text-sm transition-colors gap-2"
+          >
+            View all posts
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </div>
     </section>
