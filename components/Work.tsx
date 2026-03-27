@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { projects } from '@/data/projects';
 
 export default function Work() {
@@ -29,18 +30,31 @@ export default function Work() {
             <Link
               key={p.slug}
               href={`/projects/${p.slug}`}
-              className="group bg-[#111111] border border-white/8 rounded-2xl p-8 hover:border-blue-500/25 transition-all duration-300 flex flex-col"
+              className="group bg-[#111111] border border-white/8 rounded-2xl overflow-hidden hover:border-blue-500/25 transition-all duration-300 flex flex-col"
             >
-              <span className="inline-block text-xs font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-3 py-1 mb-6 self-start">
-                {p.tag}
-              </span>
-              <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">{p.title}</h3>
-              <p className="text-gray-400 leading-relaxed text-sm flex-1">{p.teaser}</p>
-              <div className="flex items-center gap-1 mt-6 text-blue-400 text-sm font-medium">
-                View project
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
+              {/* Image */}
+              <div className="relative w-full aspect-video overflow-hidden">
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              </div>
+
+              {/* Content */}
+              <div className="p-8 flex flex-col flex-1">
+                <span className="inline-block text-xs font-medium text-blue-400 bg-blue-500/10 border border-blue-500/20 rounded-full px-3 py-1 mb-6 self-start">
+                  {p.tag}
+                </span>
+                <h3 className="text-xl font-semibold text-white mb-4 group-hover:text-blue-400 transition-colors">{p.title}</h3>
+                <p className="text-gray-400 leading-relaxed text-sm flex-1">{p.teaser}</p>
+                <div className="flex items-center gap-1 mt-6 text-blue-400 text-sm font-medium">
+                  View project
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             </Link>
           ))}
