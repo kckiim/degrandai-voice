@@ -76,7 +76,7 @@ That's exactly what we help businesses figure out at [DEGRAND.AI](https://degran
     tag: 'AI Automation',
     title: 'AI for Business Owners: What It Actually Does Well (and Where It\'ll Waste Your Time)',
     teaser: 'You\'ve heard the pitch. Here\'s the honest version — what AI is actually good for, where it falls apart, and how to think about whether it belongs in your business.',
-    date: 'March 18, 2025',
+    date: 'March 18, 2026',
     image: '/blog-images/ai-pros-cons.jpg',
     content: `You've heard the pitch. AI is going to transform everything, automate everything, solve everything. And you're sitting there thinking: okay, but what does that actually mean for my business on a Tuesday morning?
 
