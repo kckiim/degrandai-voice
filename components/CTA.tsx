@@ -11,7 +11,7 @@ export default function CTA() {
             15 minutes. We&apos;ll talk about your call volume, what your customers typically ask, and whether an AI agent makes sense for your business right now.
           </p>
           <a
-            href="https://calendly.com/degrand/30min"
+            href="https://calendly.com/degrand"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 text-lg"
