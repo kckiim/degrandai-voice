@@ -22,7 +22,7 @@ export default function Hero() {
         </p>
 
         <a
-          href="https://calendly.com"
+          href="https://calendly.com/degrand/15-minute-consultation"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-200 text-lg"
