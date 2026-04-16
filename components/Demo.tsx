@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Vapi from '@vapi-ai/web';
 
-const VAPI_PUBLIC_KEY = '8a24827d-de2c-4cb0-9448-8eb901032d05';
+const VAPI_PUBLIC_KEY = '8de7eb94-daac-4b80-95c3-83ea5870367e';
 const ASSISTANT_ID = '2d907008-a80b-4fd7-b9c3-a8569541b495';
 
 type CallStatus = 'idle' | 'connecting' | 'active' | 'ending';
